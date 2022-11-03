@@ -36,8 +36,9 @@ class _HealthDataScreenState extends State<HealthDataScreen> {
   String? bloodPreSys;
   String? bloodPreDia;
 
-  HealthFactory health = HealthFactory();
   List<HealthDataPoint> healthData = [];
+
+  HealthFactory health = HealthFactory();
 
   @override
   void initState() {
