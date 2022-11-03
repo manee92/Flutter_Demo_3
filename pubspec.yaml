@@ -37,6 +37,7 @@ dependencies:
   health: ^3.4.4
 
   permission_handler: ^9.2.0
+  flutter_native_splash: ^2.2.13
 
 dev_dependencies:
   flutter_test:
@@ -48,6 +49,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^1.0.0
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -90,3 +92,8 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+flutter_native_splash:
+  color: "#f5bc42"
+  image: "assets/apple.png"
+  android_12:
+    color: "#42a5f5"
