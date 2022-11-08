@@ -59,7 +59,6 @@ class CustomForm1State extends State<CustomForm3> {
               ),
               MultiInputSection(
                 inputList: productsInput,
-                primaryColor: primaryColor,
               ),
               const SizedBox(
                 height: 20,
@@ -101,9 +100,8 @@ class CustomForm1State extends State<CustomForm3> {
 
 class MultiInputSection extends StatefulWidget {
   final List<Widget> inputList;
-  final Color primaryColor;
   const MultiInputSection(
-      {Key? key, required this.inputList, required this.primaryColor})
+      {Key? key, required this.inputList})
       : super(key: key);
 
   @override
@@ -119,7 +117,7 @@ class MultiInputSectionState extends State<MultiInputSection> {
         idx: 0,
         dataList: widget.inputList,
         onRemove: onRemove,
-        primaryColor: widget.primaryColor,
+        primaryColor: primaryColor,
       ));
     }
     setState(() {});
@@ -138,7 +136,7 @@ class MultiInputSectionState extends State<MultiInputSection> {
         idx: widget.inputList.length,
         dataList: widget.inputList,
         onRemove: onRemove,
-        primaryColor: widget.primaryColor,
+        primaryColor: primaryColor,
       ));
       setState(() {});
     }
