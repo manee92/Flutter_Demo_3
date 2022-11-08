@@ -117,7 +117,6 @@ class MultiInputSectionState extends State<MultiInputSection> {
         idx: 0,
         dataList: widget.inputList,
         onRemove: onRemove,
-        primaryColor: primaryColor,
       ));
     }
     setState(() {});
@@ -136,7 +135,6 @@ class MultiInputSectionState extends State<MultiInputSection> {
         idx: widget.inputList.length,
         dataList: widget.inputList,
         onRemove: onRemove,
-        primaryColor: primaryColor,
       ));
       setState(() {});
     }
@@ -161,14 +159,12 @@ class InputSectionField extends StatefulWidget {
   final Function onRemove;
   final int idx;
   final List<Widget> dataList;
-  final Color primaryColor;
   const InputSectionField({
     required Key key,
     required this.onAddTap,
     required this.onRemove,
     required this.idx,
     required this.dataList,
-    required this.primaryColor,
   }) : super(key: key);
 
   @override
@@ -187,7 +183,7 @@ class InputSectionFieldState extends State<InputSectionField> {
   );
 
   setIconColor() {
-    cl = widget.primaryColor;
+    cl = primaryColor;
   }
 
   setIcon() {
@@ -203,7 +199,7 @@ class InputSectionFieldState extends State<InputSectionField> {
   @override
   void initState() {
     super.initState();
-    cl = widget.primaryColor.withOpacity(.5);
+    cl = primaryColor.withOpacity(.5);
   }
 
   @override
@@ -235,12 +231,12 @@ class InputSectionFieldState extends State<InputSectionField> {
                         }
                       },
                       keyboardType: TextInputType.text,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         isDense: true,
-                        enabledBorder: const OutlineInputBorder(
+                        enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(color: Colors.grey)),
                         focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: widget.primaryColor)),
+                            borderSide: BorderSide(color: primaryColor)),
                       ),
                     ),
                   ),
