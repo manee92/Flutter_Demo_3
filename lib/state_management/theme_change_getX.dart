@@ -101,7 +101,7 @@ class ThemeController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    getThemeModeFromPreferences();
+    getSavedThemeMode();
   }
 
   GetStorage box = GetStorage();
@@ -115,7 +115,7 @@ class ThemeController extends GetxController {
     update();
   }
 
-  getThemeModeFromPreferences() async {
+  getSavedThemeMode() async {
     var savedTheme = box.read("theme") ?? "system";
     themeMode =
         ThemeMode.values.firstWhere((e) => describeEnum(e) == savedTheme);
