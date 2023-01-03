@@ -55,13 +55,13 @@ class HomeScreen extends StatelessWidget {
             addRadioButton(
               title: "Light",
               val: ThemeMode.light,
-              icon: Icons.dark_mode,
+              icon: Icons.light_mode_outlined,
               context: context,
             ),
             addRadioButton(
               title: "Dark",
               val: ThemeMode.dark,
-              icon: Icons.light_mode_outlined,
+              icon: Icons.dark_mode,
               context: context,
             ),
           ],
