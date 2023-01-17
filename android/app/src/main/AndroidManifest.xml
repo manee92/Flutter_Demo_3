@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.my_fitness_tracker">
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
+    <uses-feature android:name="android.hardware.camera.ar" />
    <application
         android:label="my_fitness_tracker"
         android:name="${applicationName}"
@@ -31,5 +32,6 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <meta-data android:name="com.google.ar.core" android:value="optional" />
     </application>
 </manifest>
