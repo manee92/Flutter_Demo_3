@@ -8,10 +8,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Staggered view",
-      home: GridView1()
-    );
+    return MaterialApp(title: "Staggered view", home: GridView1());
   }
 }
 
@@ -32,7 +29,7 @@ class GridView1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Grid View 1"),
+          title: const Text("Grid View"),
         ),
         backgroundColor: const Color(0XFFf7faff),
         body: Padding(
