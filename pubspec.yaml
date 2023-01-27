@@ -65,10 +65,6 @@ dependencies:
 #  ar_flutter_plugin: ^0.7.3
 
 
-
-
-
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
