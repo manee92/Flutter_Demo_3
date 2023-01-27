@@ -39,7 +39,7 @@ class ImageGridView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Grid View 3"),
+          title: const Text("Quilted Grid View"),
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),

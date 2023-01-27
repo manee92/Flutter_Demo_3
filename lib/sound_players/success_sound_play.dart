@@ -66,9 +66,7 @@ class _SubmissionScreenState extends State<SubmissionScreen> with TickerProvider
                     showProgress = false;
                     _showSuccessAlert();
                     AssetsAudioPlayer.newPlayer().open(
-                      Audio("assets/audio/success-clip.mp3"),
-                      autoStart: true,
-                      showNotification: true,
+                      Audio("assets/audio/success-clip.mp3")
                     );
                   });
                 },
