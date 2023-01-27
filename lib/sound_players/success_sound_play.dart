@@ -26,9 +26,7 @@ class SubmissionScreen extends StatefulWidget {
 
 class _SubmissionScreenState extends State<SubmissionScreen> with TickerProviderStateMixin{
   bool showProgress = false;
-
   late AnimationController controller;
-  bool determinate = false;
 
   @override
   void initState() {
@@ -64,7 +62,7 @@ class _SubmissionScreenState extends State<SubmissionScreen> with TickerProvider
                   setState(() {
                     showProgress = true;
                   });
-                  Future.delayed(const Duration(milliseconds: 5000), () {
+                  Future.delayed(const Duration(milliseconds: 4000), () {
                     showProgress = false;
                     _showSuccessAlert();
                     AssetsAudioPlayer.newPlayer().open(
@@ -86,7 +84,6 @@ class _SubmissionScreenState extends State<SubmissionScreen> with TickerProvider
   }
 
   Future<void> _showSuccessAlert() async {
-
     return showDialog<void>(
       context: context,
       builder: (BuildContext context) {
