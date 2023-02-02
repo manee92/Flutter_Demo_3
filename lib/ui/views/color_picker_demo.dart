@@ -29,6 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: noteColor,
       appBar: AppBar(
         title: const Text("Custom color picker demo"),
       ),
@@ -49,11 +50,9 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         backgroundColor: Colors.white,
       ),
-      body: ColoredBox(
-          color: noteColor,
-          child: const Center(
-            child: Text("Change my color"),
-          )),
+      body: const Center(
+        child: Text("Change my color"),
+      ),
     );
   }
 }
