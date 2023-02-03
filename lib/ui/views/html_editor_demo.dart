@@ -27,7 +27,7 @@ class AddNote extends StatefulWidget {
 }
 
 class _AddNoteState extends State<AddNote> {
-  Color noteColor = const Color(0xFF6fefb0);
+  Color noteColor = const Color(0xFFfcf000);
   final HtmlEditorController controller = HtmlEditorController();
 
   @override
@@ -43,61 +43,37 @@ class _AddNoteState extends State<AddNote> {
         },
         child: Scaffold(
           backgroundColor: noteColor,
-              appBar: AppBar(
-                title: const Text("New Note"),
+          appBar: AppBar(
+            title: const Text("New Note"),
+          ),
+          body: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: HtmlEditor(
+              controller: controller,
+              htmlEditorOptions: const HtmlEditorOptions(
+                  hint: 'Content',
+                  shouldEnsureVisible: true,
+                  autoAdjustHeight: true),
+              htmlToolbarOptions: const HtmlToolbarOptions(
+                toolbarPosition: ToolbarPosition.belowEditor, //by default
+                defaultToolbarButtons: [
+                  ColorButtons(),
+                  ListButtons(listStyles: false),
+                  InsertButtons(
+                      audio: false,
+                      video: false,
+                      otherFile: false,
+                      table: false,
+                      hr: false),
+                ], //by default
               ),
-              body: SingleChildScrollView(
-                child: Container(
-                  height: h - (AppBar().preferredSize.height + pTop),
-                  color: noteColor,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: <Widget>[
-                      Container(
-                        color: noteColor,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 10),
-                              child: HtmlEditor(
-                                controller: controller,
-                                htmlEditorOptions: const HtmlEditorOptions(
-                                    hint: 'Content',
-                                    shouldEnsureVisible: true,
-                                    autoAdjustHeight: true),
-                                htmlToolbarOptions: const HtmlToolbarOptions(
-                                  toolbarPosition:
-                                  ToolbarPosition.belowEditor, //by default
-                                  defaultToolbarButtons: [
-                                    ColorButtons(),
-                                    ListButtons(listStyles: false),
-                                    InsertButtons(
-                                        audio: false,
-                                        video: false,
-                                        otherFile: false,
-                                        table: false,
-                                        hr: false),
-                                  ], //by default
-                                ),
-                                otherOptions: OtherOptions(
-                                    height: h / 1.3,
-                                    decoration: BoxDecoration(
-                                      color: noteColor,
-                                        border: Border.all(
-                                            color: Colors.transparent,
-                                            width: 0))),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ));
+              otherOptions: OtherOptions(
+                  height: h / 1.3,
+                  decoration: BoxDecoration(
+                      color: noteColor,
+                      border: Border.all(color: Colors.transparent, width: 0))),
+            ),
+          ),
+        ));
   }
 }
-
-
