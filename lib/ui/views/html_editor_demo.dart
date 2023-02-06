@@ -27,7 +27,7 @@ class AddNote extends StatefulWidget {
 }
 
 class _AddNoteState extends State<AddNote> {
-  Color noteColor = const Color(0xFFfcf000);
+  Color noteColor = const Color(0xFFFF9C99);
   final HtmlEditorController controller = HtmlEditorController();
 
   @override
