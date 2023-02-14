@@ -120,6 +120,13 @@ flutter:
         - asset: fonts/Lato/Lato-Regular.ttf
         - asset: fonts/Lato/Lato-Bold.ttf
           weight: 800
+    - family: SF-Pro
+      fonts:
+        - asset: fonts/SF-Pro/SFPRODISPLAYREGULAR.OTF
+        - asset: fonts/SF-Pro/SFPRODISPLAYMEDIUM.OTF
+          weight: 700
+        - asset: fonts/SF-Pro/SFPRODISPLAYBOLD.OTF
+          weight: 800
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
