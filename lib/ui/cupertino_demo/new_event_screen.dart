@@ -25,29 +25,26 @@ class NewEventsScreen extends StatelessWidget {
               CupertinoContextMenu(
                 actions: <Widget>[
                   CupertinoContextMenuAction(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
+                    onPressed: () {},
                     isDefaultAction: true,
                     trailingIcon: CupertinoIcons.music_note_2,
                     child: const Text('Music'),
                   ),
                   CupertinoContextMenuAction(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
+                    onPressed: () {},
                     trailingIcon: CupertinoIcons.book,
                     child: const Text('Educational'),
                   ),
                   CupertinoContextMenuAction(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
+                    onPressed: () {},
                     trailingIcon: CupertinoIcons.arrow_up_doc,
                     child: const Text('Other'),
                   ),
                 ],
-                child:  const Icon(CupertinoIcons.add_circled, size: 80,),
+                child: const Icon(
+                  CupertinoIcons.add_circled,
+                  size: 80,
+                ),
               ),
             ],
           ),
