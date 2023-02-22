@@ -33,7 +33,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
   List<Widget> tabs = [
     const HomeScreen(),
     const ExploreScreen(),
-    const EventsScreen(),
+    const EventScreen(),
     const ProfileScreen(),
   ];
   @override

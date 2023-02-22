@@ -23,6 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
     super.dispose();
   }
 
+
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -102,7 +103,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.w600),
                             ),
-                            onPressed: () {},
+                            onPressed: () {}
                           ),
                         ),
                       ],
