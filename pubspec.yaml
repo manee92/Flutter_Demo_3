@@ -35,7 +35,6 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_feather_icons: ^2.0.0+1
-#  health: ^3.4.4
   health: ^4.4.0
 
   permission_handler: ^10.2.0
@@ -65,7 +64,6 @@ dependencies:
   device_info_plus: ^8.0.0
   shared_preferences: ^2.0.17
   html_editor_enhanced: ^2.5.1
-
 
 
 #  arcore_flutter_plugin: 0.1.0-null-safety.4
@@ -100,6 +98,7 @@ flutter:
     - assets/images/
     - assets/audio/
     - assets/animals/
+    - assets/ios-demo/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
