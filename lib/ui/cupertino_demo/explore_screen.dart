@@ -260,41 +260,6 @@ class _ExploreScreenState extends State<ExploreScreen> {
   }
 }
 
-// List<Category> catList = [
-//   Category(
-//       name: "Lorem",
-//       icon: CupertinoIcons.cube,
-//       iconColor: CupertinoColors.systemRed),
-//   Category(
-//       name: "Lorem",
-//       icon: CupertinoIcons.cube,
-//       iconColor: CupertinoColors.systemRed),
-//   Category(
-//       name: "Lorem",
-//       icon: CupertinoIcons.cube,
-//       iconColor: CupertinoColors.systemRed),
-//   Category(
-//       name: "Lorem",
-//       icon: CupertinoIcons.cube,
-//       iconColor: CupertinoColors.systemRed),
-//   Category(
-//       name: "Lorem",
-//       icon: CupertinoIcons.cube,
-//       iconColor: CupertinoColors.systemRed),
-//   Category(
-//       name: "Lorem",
-//       icon: CupertinoIcons.cube,
-//       iconColor: CupertinoColors.systemRed),
-// ];
-//
-// class Category {
-//   String name;
-//   IconData icon;
-//   Color iconColor;
-//
-//   Category({required this.name, required this.icon, required this.iconColor});
-// }
-
 class _PickerItemRow extends StatelessWidget {
   const _PickerItemRow({required this.children});
 
