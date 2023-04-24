@@ -55,5 +55,7 @@
         <array>
             <string>audio</string>
         </array>
-	</dict>
+		<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+</dict>
 </plist>
