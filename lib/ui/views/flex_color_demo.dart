@@ -221,7 +221,7 @@ class ThemeProvider extends ChangeNotifier {
 }
 
 ThemeData lightTheme =
-    FlexThemeData.light(useMaterial3: true, scheme: FlexScheme.deepOrangeM3);
+    FlexThemeData.light(useMaterial3: true, scheme: FlexScheme.blueM3);
 
 ThemeData darkTheme =
     FlexThemeData.dark(useMaterial3: true, scheme: FlexScheme.deepOrangeM3);

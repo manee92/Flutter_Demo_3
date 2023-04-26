@@ -253,12 +253,14 @@ class CustomTextInput extends StatelessWidget {
   final String? title;
   final TextEditingController ctrl;
   final Color primaryColor;
+  final int? maxLines;
   const CustomTextInput(
       {Key? key,
       required this.ctrl,
       this.hint,
       this.msg,
       this.title,
+        this.maxLines,
       required this.primaryColor})
       : super(key: key);
 
@@ -282,6 +284,7 @@ class CustomTextInput extends StatelessWidget {
             height: title != "" ? 10 : 0,
           ),
           TextFormField(
+            maxLines: maxLines ?? 1,
             controller: ctrl,
             validator: (value) {
               if (value == null || value.isEmpty) {
