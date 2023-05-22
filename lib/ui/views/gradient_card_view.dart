@@ -13,12 +13,12 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Make It Gradient"),
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(20.0),
+        body: const Padding(
+          padding: EdgeInsets.all(20.0),
           child: Column(
             children: [
               Row(
-                children: const [
+                children: [
                   Expanded(
                     child: GradientContainer(
                         title: "Lorem Ipsum",
