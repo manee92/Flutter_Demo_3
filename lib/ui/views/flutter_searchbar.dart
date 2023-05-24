@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const ButtonApp());
+  runApp(const SearchApp());
 }
 
-class ButtonApp extends StatelessWidget {
-  const ButtonApp({super.key});
+class SearchApp extends StatelessWidget {
+  const SearchApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class ButtonApp extends StatelessWidget {
       theme: ThemeData(
           colorSchemeSeed: const Color(0xff386a20),
           useMaterial3: true),
-      title: 'Button Types',
+      title: 'Search App',
       home: const SearchScreen(),
     );
   }
