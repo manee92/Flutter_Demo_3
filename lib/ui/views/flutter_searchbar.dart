@@ -12,11 +12,10 @@ class ButtonApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          brightness: Brightness.dark,
           colorSchemeSeed: const Color(0xff386a20),
           useMaterial3: true),
       title: 'Button Types',
-      home: SearchBarDemo(),
+      home: const SearchScreen(),
     );
   }
 }
