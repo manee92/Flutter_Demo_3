@@ -12,8 +12,7 @@ class SearchApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          colorSchemeSeed: const Color(0xff386a20),
-          useMaterial3: true),
+          colorSchemeSeed: const Color(0xff386a20), useMaterial3: true),
       title: 'Search App',
       home: const SearchScreen(),
     );
@@ -49,6 +48,7 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   void dispose() {
     controller.removeListener(searchListener);
+    controller.dispose();
     super.dispose();
   }
 
@@ -150,10 +150,16 @@ class SearchBarDemo extends StatelessWidget {
             SearchBar(
               hintText: "Search",
               controller: controller,
+              surfaceTintColor:
+                  const MaterialStatePropertyAll<Color>(Color(0xff0000d4)),
               padding: MaterialStateProperty.all<EdgeInsets>(
                   const EdgeInsets.symmetric(horizontal: 15)),
-              leading: const Icon(Icons.search),
-              trailing: const [Icon(Icons.mic)],
+              leading: const Icon(Icons.menu),
+              trailing: const [
+                CircleAvatar(
+                  backgroundImage: AssetImage("assets/images/avatar3.jpg"),
+                )
+              ],
             ),
             const SizedBox(
               height: 30,
@@ -161,48 +167,47 @@ class SearchBarDemo extends StatelessWidget {
             SearchBar(
               hintText: "Search",
               controller: controller,
-              surfaceTintColor: const MaterialStatePropertyAll<Color>(Color(0xffe94824)),
+              padding: MaterialStateProperty.all<EdgeInsets>(
+                  const EdgeInsets.only(left: 15)),
+              leading: const Icon(Icons.search),
+              trailing: [
+                IconButton(onPressed: () {}, icon: const Icon(Icons.mic)),
+              ],
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            SearchBar(
+              hintText: "Search",
+              controller: controller,
+              surfaceTintColor:
+                  const MaterialStatePropertyAll<Color>(Color(0xff2b3fc9)),
+              padding: MaterialStateProperty.all<EdgeInsets>(
+                  const EdgeInsets.only(left: 15)),
+              leading: const Icon(Icons.menu),
+              trailing: [
+                IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
+                IconButton(onPressed: () {}, icon: const Icon(Icons.mic)),
+              ],
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            SearchBar(
+              hintText: "Search",
+              controller: controller,
+              surfaceTintColor:
+                  const MaterialStatePropertyAll<Color>(Color(0xffe94824)),
               padding: MaterialStateProperty.all<EdgeInsets>(
                   const EdgeInsets.symmetric(horizontal: 15)),
               leading: const Icon(Icons.search),
-              trailing:  [
-                IconButton(onPressed: (){}, icon: const Icon(Icons.mic)),
+              trailing: [
+                IconButton(onPressed: () {}, icon: const Icon(Icons.mic)),
                 const CircleAvatar(
                   backgroundImage: AssetImage("assets/images/avatar3.jpg"),
                 )
               ],
             ),
-            const SizedBox(
-              height: 30,
-            ),
-            SearchBar(
-              hintText: "Search",
-              controller: controller,
-              surfaceTintColor: const MaterialStatePropertyAll<Color>(Color(0xff2b3fc9)),
-              padding: MaterialStateProperty.all<EdgeInsets>(
-                  const EdgeInsets.symmetric(horizontal: 15)),
-              leading: const Icon(Icons.menu),
-              trailing:  [
-                IconButton(onPressed: (){}, icon: const Icon(Icons.search)),
-                IconButton(onPressed: (){}, icon: const Icon(Icons.mic)),
-              ],
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            SearchBar(
-              hintText: "Search",
-              controller: controller,
-              surfaceTintColor: const MaterialStatePropertyAll<Color>(Color(0xff0000d4)),
-              padding: MaterialStateProperty.all<EdgeInsets>(
-                  const EdgeInsets.symmetric(horizontal: 15)),
-              leading: const Icon(Icons.menu),
-              trailing: const [
-                 CircleAvatar(
-                  backgroundImage: AssetImage("assets/images/avatar3.jpg"),
-                )
-              ],
-            )
           ],
         ),
       ),
