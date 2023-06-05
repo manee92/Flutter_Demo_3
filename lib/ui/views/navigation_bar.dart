@@ -55,6 +55,11 @@ class _NavigationExampleState extends State<NavigationExample> {
             icon: Icon(Icons.image_outlined),
             label: 'Gallery',
           ),
+          NavigationDestination(
+            selectedIcon: Icon(Icons.image),
+            icon: Icon(Icons.image_outlined),
+            label: 'Gallery',
+          ),
         ],
       ),
       body: <Widget>[
